@@ -1,128 +1,92 @@
-# My Django Project
+# Django Practice Exercises
 
-This is a Django project for managing reservations. This project includes a simple web application that allows users to create, view, update, and delete reservations.
+This repository contains various practice exercises for learning and mastering Django. Each exercise is contained within its own folder and covers different aspects of Django development.
 
-## Features
+## Table of Contents
 
-- User authentication (login, logout, register)
-- Create, read, update, delete (CRUD) operations for reservations
-- Admin interface for managing users and reservations
-- Responsive design
+- [Exercise 1](#Exercise-1)
+- [Exercise 2](#Exercise-2)
 
-## Requirements
+## Exercise 1
+
+**Folder:** `Exercise-1`
+
+Description: This exercise focuses on the basics of setting up a Django project, creating models, and performing basic CRUD operations. 
+
+**Contents:**
+
+- `myproject/`: The main Django project folder containing settings and configurations.
+- `myapp/`: The Django application folder containing models, views, and templates.
+- `manage.py`: A command-line utility that lets you interact with this Django project in various ways.
+
+## Exercise 2
+
+**Folder:** `Exercise-2`
+
+Description: This exercise delves into more advanced topics such as user authentication, form handling, and integrating third-party libraries.
+
+**Contents:**
+
+- `myproject/`: The main Django project folder containing settings and configurations.
+- `myapp/`: The Django application folder containing models, views, and templates.
+- `manage.py`: A command-line utility that lets you interact with this Django project in various ways.
+
+## Getting Started
+
+To get started with any of the exercises, navigate to the respective folder and follow the instructions provided in the exercise-specific README file (if available).
+
+### Prerequisites
 
 - Python 3.x
-- Django 3.x
-- MySQL
-- Virtual environment (optional but recommended)
+- Django
+- pipenv (for managing virtual environments)
 
-## Installation
+### Installation
 
 1. Clone the repository:
 
     ```bash
-    git clone https://github.com/your-username/my-django-project.git
-    cd my-django-project
+    git clone https://github.com/AyyanYe/Django-Practice-Exercises.git
     ```
 
-2. Create and activate a virtual environment:
+2. Navigate to the desired exercise folder:
 
     ```bash
-    python -m venv env
-    source env/bin/activate   # On Windows use `env\Scripts\activate`
+    cd Django-Practice-Exercises/Exercise-1
     ```
 
-3. Install the dependencies:
+3. Install dependencies:
 
     ```bash
-    pip install -r requirements.txt
+    pipenv install
     ```
 
-4. Set up the database:
-
-    - Make sure MySQL is installed and running.
-    - Create a MySQL database:
-
-    ```sql
-    CREATE DATABASE reservation;
-    ```
-
-    - Create a MySQL user and grant privileges:
-
-    ```sql
-    CREATE USER 'admindjango'@'localhost' IDENTIFIED BY 'employe@123!';
-    GRANT ALL PRIVILEGES ON reservation.* TO 'admindjango'@'localhost';
-    FLUSH PRIVILEGES;
-    ```
-
-5. Update the `settings.py` file with your database configuration:
-
-    ```python
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'reservation',
-            'USER': 'admindjango',
-            'PASSWORD': 'employe@123!',
-            'HOST': 'localhost',
-            'PORT': '3306',
-        }
-    }
-    ```
-
-6. Apply the migrations:
+4. Activate the virtual environment:
 
     ```bash
-    python manage.py makemigrations
+    pipenv shell
+    ```
+
+5. Run migrations:
+
+    ```bash
     python manage.py migrate
     ```
 
-7. Create a superuser:
-
-    ```bash
-    python manage.py createsuperuser
-    ```
-
-8. Run the development server:
+6. Start the development server:
 
     ```bash
     python manage.py runserver
     ```
 
-9. Open your web browser and go to `http://127.0.0.1:8000` to see the application.
-
-## Usage
-
-- Navigate to the homepage to view the available reservations.
-- Use the admin interface at `http://127.0.0.1:8000/admin` to manage users and reservations.
-
 ## Contributing
 
-1. Fork the repository.
-2. Create a new branch:
-
-    ```bash
-    git checkout -b feature-branch
-    ```
-
-3. Make your changes and commit them:
-
-    ```bash
-    git commit -m 'Add some feature'
-    ```
-
-4. Push to the branch:
-
-    ```bash
-    git push origin feature-branch
-    ```
-
-5. Create a new Pull Request.
+Contributions are welcome! If you have any improvements or new exercises to add, please create a pull request.
 
 ## License
 
-This project is licensed under the MIT License. See the `LICENSE` file for more details.
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ## Contact
 
-If you have any questions or suggestions, please feel free to contact me at [ayyanahmed@outlook.com].
+For any questions or inquiries, please open an issue or contact the repository owner.
